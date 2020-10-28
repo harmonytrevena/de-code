@@ -2,12 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
-import keys from "./keys";
-
-const api = {
-    key: keys.API_KEY,
-    base: keys.BASE_URL,
-  };
 
 const Weather = () => {
   const [isDesktop, setIsDesktop] = useState(false);
