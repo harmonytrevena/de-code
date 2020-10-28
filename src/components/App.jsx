@@ -1,19 +1,40 @@
-import React from 'react';
-import { StateProvider } from '../context/context';
+import React, { useReducer }  from 'react';
+import { StateProvider } from '../context/index';
+
 import Hero from './Hero/Hero';
 import About from './About/About';
-import Graditude from './Graditude/Graditude';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-
+import Gratitude from './Graditude/Graditude';
+import Weather from './Weather/Weather';
+import Silence from './Silence/Silence';
 
 function App() {
+  const initialState = {
+    item: "a moment to think",
+  };
+
+  const reducer = (state, action) => {
+    const { item } = action;
+    switch (action.type) {
+      case "CHANGE_INPUT":
+        return {
+          ...state,
+          item
+        };
+      default:
+        return state;
+    }
+  };
+
   return (
     <>
-      <StateProvider>
+      <StateProvider value={useReducer(reducer, initialState)}>
         <Hero />
         <About />
-        <Graditude />
+        <Gratitude />
+        <Weather />
+        <Silence />
         <Contact />
         <Footer />
       </StateProvider>
