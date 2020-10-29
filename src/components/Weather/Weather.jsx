@@ -16,6 +16,7 @@ const Input = styled.input`
   padding: 0.8rem 1.6rem;
   font-weight: bold;
   font-size: 2.4rem;
+  max-width: 325px;
   :disabled {
     opacity: 0.5;
   }

@@ -5,7 +5,7 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-import Gratitude from './Graditude/Graditude';
+import Gratitude from './Gratitude/Gratitude';
 import Weather from './Weather/Weather';
 import Silence from './Silence/Silence';
 
