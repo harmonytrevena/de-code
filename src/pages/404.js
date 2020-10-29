@@ -11,7 +11,7 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Page not found</title>
+        <title>page not found</title>
         <html lang="en" />
         <meta name="description" content="Page not found" />
       </Helmet>
@@ -19,16 +19,16 @@ export default () => {
         <Container>
           <Fade bottom duration={1000} delay={500} distance="30px">
             <h1 className="hero-title text-center">
-              Sorry, this path does not exist{' '}
+              calm awaits you{' '}
               <span role="img" aria-label="emoji">
-                😞
+              🤍 
               </span>
             </h1>
           </Fade>
           <Fade bottom duration={1000} delay={1000} distance="30px">
             <p className="hero-cta justify-content-center">
               <Link className="cta-btn cta-btn--hero" to="/">
-                Go back
+                find your way back
               </Link>
             </p>
           </Fade>

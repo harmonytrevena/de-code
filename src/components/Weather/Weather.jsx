@@ -17,7 +17,7 @@ const Weather = () => {
     }
   }, []);
 
-  const dateBuild = (d) => {
+  const dateBuild = () => {
     let date = String(new window.Date());
     date = date.slice(3, 15);
     return date;
@@ -55,46 +55,36 @@ const Weather = () => {
                       itaque molestiae.
                     </p>
                   </div>
-                  <div
-      className={
-        typeof weather.main != "undefined"
-          ? weather.main.temp > 18
-            ? "App hot"
-            : "App cold"
-          : "App"
-      }
-    >
-      <main>
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="search-bar"
-            onChange={(e) => setQuery(e.target.value)}
-            value={query}
-            onKeyPress={search}
-          />
-        </div>
-        {typeof weather.main != "undefined" ? (
-          <div>
-            <div className="location-container">
-              <div className="location">
-                {weather.name}, {weather.sys.country}
-              </div>
-              <div className="date"> {dateBuild(new Date())}</div>
-            </div>
-            <div className="weather-container">
-              <div className="temperature">
-                {Math.round(weather.main.temp)}°C
-              </div>
-              <div className="weather">{weather.weather[0].main}</div>
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-      </main>
-    </div>
+                  <div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Search..."
+                        className="search-bar"
+                        onChange={(e) => setQuery(e.target.value)}
+                        value={query}
+                        onKeyPress={search}
+                      />
+                    </div>
+                    {typeof weather.main != "undefined" ? (
+                      <div>
+                        <div>
+                          <div>
+                            {weather.name}, {weather.sys.country}
+                          </div>
+                          <div> {dateBuild(new Date())}</div>
+                        </div>
+                        <div>
+                          <div>
+                            {Math.round(weather.main.temp)}°C
+                          </div>
+                          <div>{weather.weather[0].main}</div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
               </Fade>
             </Col>

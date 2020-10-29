@@ -22,24 +22,23 @@ const About = () => {
     <section id="about">
       <Container>
         <Title title="set the timer." />
-        <Row className="about-wrapper">
-          <Col md={6} sm={12}>
-            <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
-                <Timer />
+          <Fade bottom duration={1000} delay={600} distance="30px">
+            <div className="about-wrapper__image">
+              <Timer />
+            </div>
+          </Fade>
+          <br />
+          <br />
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+            <div>
+              <h1 className="hero-title">
+                The next ten minutes are completely 
+              <span style={{color: '#272341'}}> yours</span>.
+              </h1>
               </div>
-            </Fade>
-          </Col>
-          <Col md={6} sm={12}>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-              <div className="about-wrapper__info">
-                <p className="about-wrapper__info-text">Spend the next few minutes doing....</p>
-                <p className="about-wrapper__info-text">or....</p>
-                <p className="about-wrapper__info-text">or....</p>
-              </div>
-            </Fade>
-          </Col>
-        </Row>
+          </Fade>
+          <br />
+          <br />
       </Container>
     </section>
   );

@@ -23,19 +23,25 @@ const Silence = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Observe silence." />
-          <Row>
-            <Col lg={4} sm={12}>
-              <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-                <div className="project-wrapper__text">
-                  <div>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+              <div className="project-wrapper__text">
+                <div>
+                  <h1 className="hero-title">
+                    A simple 
+                  <span style={{color: '#6A6B7A'}}> meditation</span>.
+                  </h1>
+                </div>
+                <br />
+                <div>
                     <p>
-                      Add a simple meditation.
+                    Settle yourself. Turn off distractions. Close your door. Take a moment to calm your thoughts. Allow your body to be comfortable, seated in a chair, with your spine supported. Turn your attention to your breath. Breathe in and out through your nose. Allow your eyelids to softly close if you wish. These next ten minutes are your own.
+                    </p>
+                    <p>
+                    - wonder finder
                     </p>
                   </div>
-                </div>
-              </Fade>
-            </Col>
-          </Row>
+              </div>
+            </Fade>
         </div>
       </Container>
     </section>

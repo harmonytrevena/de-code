@@ -1,3 +1,5 @@
+// Comment added for github push
+
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,8 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `d e . c o d e`,
+        short_name: `calm awaits you`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#02aab0`,

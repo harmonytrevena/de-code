@@ -11,7 +11,9 @@ const Footer = () => {
             <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
           </Link>
         </span>
-        <p className="footer__text">Built for you by Harmony.</p>
+        <p className="footer__text">
+          built by Harmony
+        </p>
       </Container>
     </footer>
   );

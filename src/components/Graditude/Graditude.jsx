@@ -1,9 +1,49 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Title from '../Title/Title';
 import StateContext from '../../context';
 
+import styled from "styled-components";
+
+const Button = styled.button`
+  background: transparent;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #6A6B7A;
+  margin: 0.5em 0.5em 0.5em 0em;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  :disabled {
+    opacity: 0.5;
+  }
+  :hover {
+    background-color: #6A6B7A;
+    color: white;
+  }
+`;
+
+const Input = styled.input`
+  background: transparent;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #6A6B7A;
+  margin: 0.5em 1em 0.5em 0em;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  :disabled {
+    opacity: 0.5;
+  }
+  ::placeholder {
+    color: #ECF0F3;
+  }
+`;
 
 const Gratitude = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -40,44 +80,32 @@ const Gratitude = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Practice Gratitude." />
-          <Row>
-            <Col lg={4} sm={12}>
-              <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-                <div className="project-wrapper__text">
-                  <div>
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque,
-                      ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum
-                      consequatur blanditiis inventore debitis fuga numquam voluptate architecto
-                      itaque molestiae.
-                    </p>
-                  </div>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+              <div className="project-wrapper__text">
+                <div>
+                  <h1 className="hero-title">
+                    I am grateful for 
+                  <span style={{color: '#6A6B7A'}}> {item}</span>.
+                  </h1>
                 </div>
-              </Fade>
-            </Col>
-            <Col lg={4} sm={12}>
-              <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-                <div className="project-wrapper__text">
-                  <div>
-                    <h2>I am grateful for <strong>{item}</strong>.</h2>
-                  </div>
-                  <br />
-                  <div>
+              </div>
+            </Fade>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+              <div className="project-wrapper__text">
+                <div>
                   <form onSubmit={e => _handleSubmit(e)}>
-                      <input 
+                      <Input 
                           type="text" 
                           name="newItem" 
-                          placeholder="What are you grateful for?" 
+                          placeholder="type here" 
                           value={input}
                           onChange={(event) => _handleChange(event.target.value)}
                       />
-                      <button type="submit">Practice Gratitude</button>
+                      <Button type="submit">Practice Gratitude</Button>
                   </form>
-                  </div>
                 </div>
-              </Fade>
-            </Col>
-          </Row>
+              </div>
+            </Fade>
         </div>
       </Container>
     </section>
