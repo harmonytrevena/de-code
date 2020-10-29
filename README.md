@@ -1,5 +1,5 @@
-# Gatsby Simplefolio 
-## A clean, beautiful and responsive portfolio template for Developers
+# d e . c o d e
+## A app for when you need a break. Come for 10 minutes, stay as long as you like.
 
 <h2 align="center">
   <!-- <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby Simplefolio" width="600px" /> -->
@@ -7,14 +7,11 @@
 </h2>
 
 ## Features
+Modern UI Design + Reveal Animations\
+One Page Layout built with React + Gatsby\
+Utilizes React Hooks + Context\
+Styled with Bootstrap v4.3, Custom SCSS + Styled-Components\
+Fully Responsive\
+No Signup or Login Required\
 
-⚡️ Modern UI Design + Reveal Animations\
-⚡️ One Page Layout built with React\
-⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
-⚡️ Fully Responsive\
-⚡️ Configurable color scheme\
-⚡️ Image optimization with Gatsby\
-⚡️ Easy site customization\
-⚡️ Well organized documentation
-
-To view a live example, **[click here](https://cobidev.com/)**
+To view a live example, **[click here](https://de-code.io/)**
