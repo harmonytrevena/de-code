@@ -37,6 +37,7 @@
     "react-scroll": "^1.7.16",
     "react-tilt": "^0.1.4",
     "react-timer-hook": "^2.0.3",
+    "styled-components": "^5.2.0",
     "uuid": "^8.3.1",
     "uuidv4": "^6.2.4"
   },

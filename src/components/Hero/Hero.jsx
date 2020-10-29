@@ -26,10 +26,8 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">welcome to
-            <span className="text-color-main"> d e . c o d e</span>
+            <span style={{color: '#6A6B7A'}}> d e . c o d e</span>
           </h1>
-          {/* <h2 className="">a place to recharge and reflect</h2>
-          <br /> */}
         </Fade>
         <br />
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
