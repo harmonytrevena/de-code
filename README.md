@@ -14,4 +14,8 @@ Styled with Bootstrap v4.3, Custom SCSS + Styled-Components\
 Fully Responsive\
 No Signup or Login Required
 
+<<<<<<< HEAD
 To view a live, **[click here](https://de-code.io/)**
+=======
+To view a live, **[click here](https://de-code.io/)**
+>>>>>>> 5207ca96ee2656e95e02e1a16d46b372c55c7c51
