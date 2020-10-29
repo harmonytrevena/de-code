@@ -12,6 +12,31 @@ const Box = styled.div`
   box-shadow: inset 20px 20px 30px #D1D9E6, inset -20px -20px 30px #FFFFFF;
   border-radius: 1000px;
 `;
+
+const Font = styled.div`
+  padding-top: 8rem;
+  font-size: 10rem;
+`;
+
+const Button = styled.button`
+  background: transparent;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #6A6B7A;
+  margin: 0.5em;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  :disabled {
+    opacity: 0.5;
+  }
+  :hover {
+    background-color: #6A6B7A;
+    color: white;
+  }
+`;
  
 function Countdown({ expiryTimestamp }) {
   const {
@@ -23,26 +48,32 @@ function Countdown({ expiryTimestamp }) {
   } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
  
   return (
+    <>
       <div style={{textAlign: 'center'}}>
-      <Box>
-        <div style={{fontSize: '10rem'}}>
-          <span>{minutes}</span>:<span>{seconds}</span>
+        <Box>
+          <Font>
+            <span>{minutes}</span>:<span>{seconds}</span>
+          </Font>
+        </Box>
+        <br />
+        <br />
+        <div>
+          <Button onClick={pause}>pause</Button>
+          <Button onClick={resume}>resume</Button>
+          <Button onClick={() => {
+            const time = new Date();
+            time.setSeconds(time.getSeconds() + 601);
+            restart(time)
+          }}>restart</Button>
         </div>
-      </Box>
-        <button onClick={pause}>Pause</button>
-        <button onClick={resume}>Resume</button>
-        <button onClick={() => {
-          const time = new Date();
-          time.setSeconds(time.getSeconds() + 600);
-          restart(time)
-        }}>Restart</button>
       </div>
+    </>
   );
 }
  
 export default function Timer() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 600);
+  time.setSeconds(time.getSeconds() + 601);
   return (
     <div>
       <Countdown expiryTimestamp={time} />
