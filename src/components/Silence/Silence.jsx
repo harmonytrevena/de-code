@@ -33,13 +33,13 @@ const Silence = () => {
                 </div>
                 <br />
                 <div>
-                    <p>
-                    Settle yourself. Turn off distractions. Close your door. Take a moment to calm your thoughts. Allow your body to be comfortable, seated in a chair, with your spine supported. Turn your attention to your breath. Breathe in and out through your nose. Allow your eyelids to softly close if you wish. These next ten minutes are your own.
-                    </p>
-                    <p>
+                  <p>
+                    Settle yourself. Turn off distractions. Close your door. Take a moment to calm your thoughts. Allow your body to be comfortable, seated in a chair, with your spine supported. Turn your attention to your breath. Breathe in and out through your nose. Allow your eyelids to softly close and settle your awareness within. These next ten minutes are your own.
+                  </p>
+                  <p>
                     - wonder finder
-                    </p>
-                  </div>
+                  </p>
+                </div>
               </div>
             </Fade>
         </div>

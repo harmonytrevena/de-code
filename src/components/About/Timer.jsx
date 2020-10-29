@@ -5,8 +5,8 @@ import styled from "styled-components";
 
 const Box = styled.div`
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 375px;
+  height: 375px;
   border: 40px solid #E3E6EC;
   box-sizing: border-box;
   box-shadow: inset 20px 20px 30px #D1D9E6, inset -20px -20px 30px #FFFFFF;
@@ -14,7 +14,7 @@ const Box = styled.div`
 `;
 
 const Font = styled.div`
-  padding-top: 8rem;
+  padding-top: 7.5rem;
   font-size: 10rem;
 `;
 

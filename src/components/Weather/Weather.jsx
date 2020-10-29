@@ -3,6 +3,45 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 
+import styled from "styled-components";
+
+const Input = styled.input`
+  background: transparent;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #6A6B7A;
+  margin: 0.5em 1em 0.5em 0em;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  :disabled {
+    opacity: 0.5;
+  }
+  ::placeholder {
+    color: #ECF0F3;
+  }
+`;
+
+const Box = styled.div`
+    position: relative;
+    height: 200px;
+    min-width: 245px;
+    background: #E3E6EC;
+    box-shadow: 18px 18px 20px #D1D9E6, -18px -18px 20px #FFFFFF;
+    border-radius: 30px;
+    text-align: center;
+    color: #6A6B7A;
+    padding: 0.8rem 1.6rem;
+    font-weight: bold;
+    font-size: 2.4rem;
+`;
+
+const Font = styled.div`
+  font-size: 6rem;
+`;
+
 const Weather = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -44,47 +83,60 @@ const Weather = () => {
         <div className="project-wrapper">
           <Title title="Appreciate Nature." />
           <Row>
-            <Col lg={4} sm={12}>
+            <Col>
               <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
                 <div className="project-wrapper__text">
                   <div>
+                    <h1 className="hero-title">
+                      Perhaps a walk 
+                    <span style={{color: '#6A6B7A'}}> outside</span>.
+                    </h1>
+                  </div>
+                  <br />
+                  <div>
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque,
-                      ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum
-                      consequatur blanditiis inventore debitis fuga numquam voluptate architecto
-                      itaque molestiae.
+                      Check the weather near you, before spending time in nature.
                     </p>
                   </div>
                   <div>
                     <div>
-                      <input
+                      <Input
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Atlanta"
                         className="search-bar"
                         onChange={(e) => setQuery(e.target.value)}
                         value={query}
                         onKeyPress={search}
                       />
                     </div>
+                  </div>
+                </div>
+              </Fade>
+            </Col>
+            <Col>
+              <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+                <div className="project-wrapper__text">
+                  <Box>
                     {typeof weather.main != "undefined" ? (
                       <div>
                         <div>
-                          <div>
-                            {weather.name}, {weather.sys.country}
-                          </div>
-                          <div> {dateBuild(new Date())}</div>
+                          <Font>
+                            {Math.round(weather.main.temp)}°C
+                          </Font>
                         </div>
                         <div>
-                          <div>
-                            {Math.round(weather.main.temp)}°C
-                          </div>
-                          <div>{weather.weather[0].main}</div>
+                          <h1 className="hero-title">{weather.weather[0].main}</h1>
+                        </div>
+                        <div>
+                          <p className="hero-title">
+                            on {dateBuild(new Date())} in <span>{weather.name}, {weather.sys.country}</span>
+                          </p>
                         </div>
                       </div>
                     ) : (
                       ""
                     )}
-                  </div>
+                  </Box>
                 </div>
               </Fade>
             </Col>
