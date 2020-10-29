@@ -12,6 +12,6 @@ One Page Layout built with React + Gatsby\
 Utilizes React Hooks + Context\
 Styled with Bootstrap v4.3, Custom SCSS + Styled-Components\
 Fully Responsive\
-No Signup or Login Required\
+No Signup or Login Required
 
-To view a live example, **[click here](https://de-code.io/)**
+To view a live, **[click here](https://de-code.io/)**
