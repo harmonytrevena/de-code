@@ -62,7 +62,7 @@ function Countdown({ expiryTimestamp }) {
           <Button onClick={resume}>resume</Button>
           <Button onClick={() => {
             const time = new Date();
-            time.setSeconds(time.getSeconds() + 601);
+            time.setSeconds(time.getSeconds() + 600);
             restart(time)
           }}>restart</Button>
         </div>
@@ -73,7 +73,7 @@ function Countdown({ expiryTimestamp }) {
  
 export default function Timer() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 601);
+  time.setSeconds(time.getSeconds() + 600);
   return (
     <div>
       <Countdown expiryTimestamp={time} />
