@@ -15,3 +15,5 @@ Fully Responsive\
 No Signup or Login Required
 
 To view a live, **[click here](https://de-code.io/)**
+
+Little note of appreciation to **[my Mum](https://www.livelifewithwonder.com/)**, for writing the meditation.
